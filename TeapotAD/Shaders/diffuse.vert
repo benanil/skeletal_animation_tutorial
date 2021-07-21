@@ -23,8 +23,8 @@ void main()
 	// and combine them. 
    	mat4 BoneTransform = gBones[ BoneIDs[0] ] * Weights[0];
 	BoneTransform += gBones[ BoneIDs[1] ] * Weights[1];
-    BoneTransform += gBones[ BoneIDs[2] ] * Weights[2];
-    BoneTransform += gBones[ BoneIDs[3] ] * Weights[3];
+        BoneTransform += gBones[ BoneIDs[2] ] * Weights[2];
+        BoneTransform += gBones[ BoneIDs[3] ] * Weights[3];
 
 	// Transformed vertex position 
 	vec4 tPos = BoneTransform * vec4(VertexPosition, 1.0);
@@ -36,7 +36,7 @@ void main()
 
 	N = normalize( mat4(NormalMatrix) * tNormal).xyz;
 
-    vec4 worldPos = M * tPos;
+        vec4 worldPos = M * tPos;
 
 	vertPos = worldPos.xyz;     
 }
